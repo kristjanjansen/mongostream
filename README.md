@@ -11,7 +11,7 @@ npm i # or yarn
 npm run build
 ```
 
-### Set up Mongodb
+### Set up local Mongodb
 
 You will need to configure Mongo to use replicasets / oplog in order to get the realtime changefeed.
 
@@ -34,6 +34,12 @@ and run
 ```
 rs.initiate({ _id: "rs", members: [ {_id: 0, host: "localhost:27017"} ] })
 ```
+
+### Set up cloud Mongo instance
+
+For mLab you will need a paid plan http://docs.mlab.com/oplog/
+
+MongoDb Atlas information: https://docs.atlas.mongodb.com/faq/#does-mongodb-service-expose-the-oplog
 
 ### Run server
 
