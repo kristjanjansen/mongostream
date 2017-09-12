@@ -1,0 +1,141 @@
+{
+  "name": "kristjanjansen/mongostream",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/kristjanjansen/mongostream",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/mongostream",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "mongostream",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "mongostream: ",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "kristjanjansen",
+          "repo": "mongostream"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h2>About</h2>\n<p>Demostration of pushing MongoDB realtime changes to browser and reactively rendering them.</p>\n<h3>Installation</h3>\n<pre>git <span class=\"hljs-built_in\">clone</span> kristjanjansen/mongostream\n<span class=\"hljs-built_in\">cd</span> mongostream\nnpm i <span class=\"hljs-comment\"># or yarn</span>\nnpm run build</pre><h3>Set up local Mongodb</h3>\n<p>You will need to configure Mongo to use replicasets / oplog in order to get the realtime changefeed.</p>\n<p>Assuming you are installed MongoDB on OSX using <code>brew install</code>: </p>\n<pre>mongod --config /usr/<span class=\"hljs-built_in\">local</span>/etc/mongod.conf --replSet rs</pre><blockquote>\n<p>Note: You can likely skip <code>--config</code> setting when in other platforms</p>\n</blockquote>\n<p>Then log into Mongo shell</p>\n<pre>mongo localhost:27017/<span class=\"hljs-built_in\">test</span></pre><p>and run</p>\n<pre><span class=\"hljs-selector-tag\">rs</span><span class=\"hljs-selector-class\">.initiate</span>({ <span class=\"hljs-attribute\">_id</span>: <span class=\"hljs-string\">&quot;rs&quot;</span>, <span class=\"hljs-attribute\">members</span>: [ {<span class=\"hljs-attribute\">_id</span>: <span class=\"hljs-number\">0</span>, <span class=\"hljs-attribute\">host</span>: <span class=\"hljs-string\">&quot;localhost:27017&quot;</span>} ] })</pre><h3>Set up cloud Mongo instance</h3>\n<p>For mLab you will need a paid plan <a href=\"http://docs.mlab.com/oplog/\">http://docs.mlab.com/oplog/</a></p>\n<p>MongoDb Atlas information: <a href=\"https://docs.atlas.mongodb.com/faq/#does-mongodb-service-expose-the-oplog\">https://docs.atlas.mongodb.com/faq/#does-mongodb-service-expose-the-oplog</a></p>\n<h3>Run server</h3>\n<pre><span class=\"hljs-keyword\">node</span> <span class=\"hljs-title\">index</span></pre><p>and point the browser to <code>http://localhost:8080</code></p>\n<h3>Insert and update data</h3>\n<p>Insert</p>\n<pre><span class=\"hljs-keyword\">node</span> <span class=\"hljs-title\">insert</span> mykey value</pre><p>Update</p>\n<pre><span class=\"hljs-keyword\">node</span> <span class=\"hljs-title\">update</span> mykey value newvalue</pre>"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/kristjanjansen/mongostream",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/kristjanjansen",
+          "text": "kristjanjansen"
+        }
+      ]
+    }
+  ]
+}
