@@ -1,6 +1,6 @@
 ## About
 
-Demostration of pushing MongoDB realtime changes to browser and reactively rendering them.
+Demostration of pushing MongoDB realtime changes to browser and reactively rendering them. It is using the old opstream approach (it is now superseded by https://docs.mongodb.com/manual/changeStreams/).
 
 ### Installation
 
